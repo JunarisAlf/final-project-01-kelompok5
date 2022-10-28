@@ -1,14 +1,16 @@
 const Reflection = require('../models/Reflection');
 const jwt = require('jsonwebtoken');
+const { v4: uuidv4 } = require('uuid');
 const { emptyQuery } = require('pg-protocol/dist/messages');
 
 class ReflectionController {
     static async create(req, res, next) {
         const {succes, low_point, take_away} = req.body;
+        const id = uuidv4();
         try{
             // Agar request tidak kosong
             if (!Object.keys(req.body).length) throw Error('Request Kosong');
-            const addData = await Reflection.addReflection(succes, low_point, take_away, req.user.id);
+            const addData = await Reflection.addReflection(id, succes, low_point, take_away, req.user.id);
             if(addData.succeed == true){
                 res.status(201).json(addData.data);
             }

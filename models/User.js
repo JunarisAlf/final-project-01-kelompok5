@@ -24,8 +24,6 @@ class User {
         } catch (err) {
             return {err}
         }
-
-     
     }
 }
 module.exports = User;

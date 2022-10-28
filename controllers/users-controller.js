@@ -13,8 +13,11 @@ class UsersController {
             res.status(200).json({
                 "token": jwtToken
             });
+        }else{
+            res.send("daftar gagal")
         }
     }catch(err){
+        console.log(err)
         next(err) //internal server error
     }
   }
@@ -32,18 +35,17 @@ class UsersController {
                     "token": jwtToken
                 });
             }else{
-                throw {name: "WrongPassword"}
+                next({name: "WrongPassword"})
                 // res.status(200).json({"messages": "Password Wrong!"})
             }
         }else{
-            throw {name: "EmailNotFound"}
+            next({name: "EmailNotFound"})
             // res.status(200).json({"messages": "Email not registered!"})
             
         }
         
     }catch(err){
-        console.log(err);
-        res.status(200).json({err})
+        next({})
     }
   }
 }
