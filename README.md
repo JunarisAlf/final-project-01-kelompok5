@@ -8,13 +8,10 @@
  - `npm run dev`
  
  **API EndPoint**
- - POST `/api/v1/users/register`
- request body {email,password}
- response body {token}
- - POST `/api/v1/users/login`
-request body {email,password}
-response body {token}
-- GET `/test` testing authMiddleware
-request header Bearer Token
-response email
+- Untuk melihat endpoint yang tersedia beserta request body nya, import file `endpoint-postman.json` ke aplikasi postman
+
+**Dibuat Oleh**
+- Junaris Alfianto
+- Yusron F
+- Yogi Masaji
 
