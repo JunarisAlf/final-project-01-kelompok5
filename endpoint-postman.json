@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "14fb6852-cec6-474f-893b-a399d348b10d",
+		"name": "Final Project 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16486976"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kelompok5@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/users/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kelompok5@gmail.com\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reflection Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbG9tcG9rNUBnbWFpbC5jb20iLCJpYXQiOjE2NjY5NDU5NDJ9.xrIFQzQyFXDnyNzf5u3zEBvlifZLdo3XLdmZGGH_3AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"succes\": \"test\",\n    \"low_point\": \"test\",\n    \"take_away\": \"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/reflections",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reflections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reflection Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbG9tcG9rNUBnbWFpbC5jb20iLCJpYXQiOjE2NjY5NDU5NDJ9.xrIFQzQyFXDnyNzf5u3zEBvlifZLdo3XLdmZGGH_3AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"succes\": \"test edit\",\n    \"low_point\": \"test edit\",\n    \"take_away\": \"test edit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/reflections/a4211a64-2ce2-4557-a3ab-8c738a51a5bd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reflections",
+						"a4211a64-2ce2-4557-a3ab-8c738a51a5bd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reflection Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbG9tcG9rNUBnbWFpbC5jb20iLCJpYXQiOjE2NjY5NDU5NDJ9.xrIFQzQyFXDnyNzf5u3zEBvlifZLdo3XLdmZGGH_3AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/reflections/a4211a64-2ce2-4557-a3ab-8c738a51a5bd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reflections",
+						"a4211a64-2ce2-4557-a3ab-8c738a51a5bd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reflection Get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlbG9tcG9rNUBnbWFpbC5jb20iLCJpYXQiOjE2NjY5NDU5NDJ9.xrIFQzQyFXDnyNzf5u3zEBvlifZLdo3XLdmZGGH_3AY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/api/v1/reflections",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"reflections"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
